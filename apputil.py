@@ -23,18 +23,26 @@ def ways(n):
 
 import numpy as np
 
+# Part 1: Student with the lowest score
 def lowest_score(names, scores):
     '''
     Return the name of the student with the lowest test score.
+    Works for both Python lists and NumPy arrays.
     '''
+    names = np.array(names)
+    scores = np.array(scores)
     
     index = np.argmin(scores)
     return names[index]
 
+# Part 2: Names sorted in descending order of scores
 def sort_names(names, scores):
     '''
     Return names sorted in descending order of scores.
+    Works for both Python lists and NumPy arrays.
     '''
+    names = np.array(names)
+    scores = np.array(scores)
     
-    sorted_indices = np.argsort(scores)[::-1]
-    return names[sorted_indices]
+    sorted_indices = np.argsort(scores)[::-1]  # descending order
+    return list(names[sorted_indices])
