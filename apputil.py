@@ -1,5 +1,6 @@
-def ways(n):
-    return None
+# Exercise 1 
+
+import numpy as np
 
 def ways(n):
     '''
@@ -18,5 +19,22 @@ def ways(n):
     
     return count
 
+# Exercise 2
 
+import numpy as np
 
+def lowest_score(names, scores):
+    '''
+    Return the name of the student with the lowest test score.
+    '''
+    
+    index = np.argmin(scores)
+    return names[index]
+
+def sort_names(names, scores):
+    '''
+    Return names sorted in descending order of scores.
+    '''
+    
+    sorted_indices = np.argsort(scores)[::-1]
+    return names[sorted_indices]
